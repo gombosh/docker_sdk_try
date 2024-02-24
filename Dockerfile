@@ -15,6 +15,4 @@ RUN apt-get update && apt-get install -y \
 
 RUN python3 -m venv venv && . venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
 
-CMD ["python3", "test_docker_sdk.py"]
-
-
+CMD ". venv/bin/activate && python3 test_docker_sdk.py"
