@@ -13,6 +13,6 @@ COPY . /app
 #     nano \
 #     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 CMD "pwd && python3 ./test_docker_sdk.py"
