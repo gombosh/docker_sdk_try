@@ -15,12 +15,15 @@ client = docker.from_env()
 client.images.pull('hello-world')
 
 # run the hello-world image
-container = client.containers.run('hello-world')
+container = client.containers.run('hello-world', detach=True)
 
 # print the output of the container
-print(container)
+print(container.logs())
+
+container_id = client.containers.get(container.id)
 
 # remove the container
+container = client.containers.get(container.id)
 container.remove()
 
 # remove the image
