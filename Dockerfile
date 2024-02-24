@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip && pip intall -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
 CMD ["python3", "test_docker_sdk.py"]
 
