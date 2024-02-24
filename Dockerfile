@@ -5,14 +5,14 @@ WORKDIR /app
 
 COPY . /app 
 
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    git \
-    vim \
-    nano \
-    && rm -rf /var/lib/apt/lists/*
+# RUN apt-get update && apt-get install -y \
+#     curl \
+#     wget \
+#     git \
+#     vim \
+#     nano \
+#     && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m venv venv && . venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-CMD ". venv/bin/activate && python3 test_docker_sdk.py"
+CMD "python3 test_docker_sdk.py"
