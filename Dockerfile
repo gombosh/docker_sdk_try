@@ -1,6 +1,10 @@
 # from the default python image, and change the command to echo "Hello, DORON!"
 FROM python:3.12
 
+WORKDIR /app
+
+COPY . /app 
+
 RUN apt-get update && apt-get install -y \
     curl \
     wget \
