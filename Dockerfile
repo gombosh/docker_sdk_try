@@ -15,4 +15,4 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-CMD "pwd && python3 ./test_docker_sdk.py"
+CMD "pwd && ls -l"
