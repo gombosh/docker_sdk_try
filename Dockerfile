@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN python3 -m venv venv && source venv/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
 
 CMD ["python3", "test_docker_sdk.py"]
 
