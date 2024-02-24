@@ -32,7 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          docker build -t test .
-          echo "docker build done"
-          docker run test
-          echo "docker run done"
+          pip install -r requirements.txt
+          echo "pip install done"
+          python3 test_docker_sdk.py
+          echo "docker sdk test done"
