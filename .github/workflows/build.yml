@@ -34,3 +34,5 @@ jobs:
         run: |
           docker build -t test .
           echo "docker build done"
+          docker run test
+          echo "docker run done"
