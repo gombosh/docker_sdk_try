@@ -15,4 +15,4 @@ COPY . /app
 
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-CMD "python3 test_docker_sdk.py"
+CMD "ls -l && python3 ./test_docker_sdk.py"
