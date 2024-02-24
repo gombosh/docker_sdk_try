@@ -15,6 +15,6 @@ COPY . /app
 
 RUN pip install -r requirements.txt
 
-RUN "chmod +x /app/test_docker_sdk.py"
+RUN chmod +x /app/test_docker_sdk.py
 
-CMD "python3 /app/test_docker_sdk.py"
+CMD ["python3", "/app/test_docker_sdk.py"]
