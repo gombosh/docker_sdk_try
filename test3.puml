@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+
+node "Deployment Server" {
+    [Package Download]
+    [Installer Script]
+}
+
+node "Backend Server" {
+    [Component Extraction]
+}
+
+[Package Download] --> [Installer Script]
+[Installer Script] --> [Component Extraction]
+
+@enduml

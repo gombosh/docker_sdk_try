@@ -1,0 +1,34 @@
+@startuml
+
+'Classes:
+'-------------
+
+class User {
+  - id: int  
+  - name: String  
+  + sendMessage()  
+  + addContact()
+}
+
+class Message {
+  - id: int  
+  - content: String
+  + metadata: int
+  + send()  
+
+}
+
+class Group {
+  - id: int  
+  - name: String
+  + addMember() 
+}
+
+
+'Associations:
+'-------------
+
+"User" -- "Message"  
+"User" -- "Group"
+
+@enduml

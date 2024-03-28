@@ -1,0 +1,32 @@
+@startuml
+
+left to right direction
+
+node "Development Environment" {
+    [Developer Workstation]
+    [Version Control]
+}
+
+node "Continuous Integration" {
+    [CI Server]
+    [Build Server]
+}
+
+node "Deployment Environment" {
+    [Staging Server]
+    [Production Server]
+}
+
+node "Jenkins Pipeline" {
+    [Jenkins Master]
+    [Jenkins Agent]
+}
+
+[Developer Workstation] --> [Version Control]
+[Version Control] --> [Jenkins Pipeline]
+[Jenkins Pipeline] --> [CI Server]
+[CI Server] --> [Build Server]
+[Build Server] --> [Staging Server]
+[Staging Server] --> [Production Server]
+
+@enduml
